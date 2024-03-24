@@ -45,19 +45,20 @@ public class Ticket {
         this.person = person;
     }
 
-    // method for printing ticket information
 
+//    method for printing ticket information
     public void print_ticket_info() {
         person.print_person_info();
         System.out.println("Seat: " + getRow() + "" + getSeat());
         System.out.println("Price: £" + getPrice());
     }
 
+//    Method to save Ticket information to a file
     public void save() {
         try {
             FileWriter myWriter = new FileWriter(getRow() + String.valueOf(getSeat()) + ".txt");
-            myWriter.write("Name: " + person.getName() + "\nSurname: " + person.getSurname() + "\nEmail: "
-                    + person.getEmail() + "\nSeat: " + getRow() + "" + getSeat() + "\nPrice: £" + getPrice() + "\n");
+            myWriter.write("Ticket Details:"+"\nName: " + person.getName() + "\nSurname: " + person.getSurname() + "\nEmail: "
+                    + person.getEmail() + "\nSeat: " + getRow() + "" + getSeat() + "\nPrice: £" + getPrice() + "\n\nSafe Flight!");
             myWriter.close();
         } catch (IOException e) {
             System.out.println("An error occurred while saving.");

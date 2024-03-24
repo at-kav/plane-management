@@ -34,6 +34,7 @@ public class Person {
         this.email = email;
     }
 
+//    Print person information
     public void print_person_info() {
         System.out.println("Name: " + getName());
         System.out.println("Surname: " + getSurname());
